@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends 'basecolor.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+<form action="retrieve" method="post">
+    {% csrf_token %}
+    <b>Student Id</b><br>
+    <input type="text" name="studentid"><br>
+    <b>Student Name</b><br>
+    <input type="text" name="studentname"><br>
+    <b>Gender</b><br>
+    <input type="radio" value="Male" name="gender">Male<br>
+    <input type="radio" value="Female" name="gender">Female<br>
+    <b>Date of Birth</b><br>
+    <input type="date"name="date" id="date" ><br>
+    <b>City</b><br>
+    <input type="text" name="city"><br>
+    <b>State</b><br>
+    <input type="text" name="state"><br>
+    <b>Email Id</b><br>
+    <input type="text" name="email_id"><br>
+    <b>Qualification</b><br>
+    <input type="text" name="qualification"><br>
+    <b>Stream</b><br>
+    <input type="text" name="stream"><br>
+    <input type="submit"  value="Submit">
+</form>
+{% endblock %}
+</body>
+</html>
